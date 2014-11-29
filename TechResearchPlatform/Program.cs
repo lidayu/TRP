@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using TestHashTable;
 
 namespace TechResearchPlatform
 {
@@ -10,9 +11,8 @@ namespace TechResearchPlatform
     {
         static void Main(string[] args)
         {
-            Hashtable ht = new Hashtable();
-            ht.Add("lidayu", "lidayu@abchina.com");
-            Console.WriteLine(ht["lidayu"]);
+            hashT HasTable = new hashT();
+            HasTable.testHashTableNull();
             Console.ReadKey();
 
         }
