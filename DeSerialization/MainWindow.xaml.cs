@@ -13,6 +13,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
 using System.Xml;
+using System.IO;
+
 
 namespace DeSerialization
 {
@@ -21,6 +23,7 @@ namespace DeSerialization
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<transaction> tranInfoList;
         public MainWindow()
         {
             InitializeComponent();
@@ -49,7 +52,59 @@ namespace DeSerialization
         /// <param name="e"></param>
         private void button2_Click(object sender, RoutedEventArgs e)
         {
+           // Class2Xml();
+            XmlToClass();
+
 
         }
+        
+        private void XmlToClass()
+        {
+            tranInfoList = new List<transaction>();
+            try
+            {
+                //这种读取方式，这个xml需要保存时Unicode格式，不是utf-8
+                //utf-8编码为utf-8,如果是utf-16，编码为unicode
+                XmlReader xmlReader = XmlReader.Create("conf\\transaction.xml");
+
+
+                XmlSerializer xmlSearializer = new XmlSerializer(typeof(Trans));
+                Trans info = (Trans)xmlSearializer.Deserialize(xmlReader);
+            }
+            catch
+            {
+
+            }
+
+
+           
+            
+        }
+
+        /// <summary>
+        /// 把类序列化为xml
+        /// </summary>
+        private void Class2Xml()
+        {
+            StringWriter sw = new StringWriter();
+            //创建XML命名空间
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ns.Add("", "");
+            XmlSerializer serializer = new XmlSerializer(typeof(Trans));
+            Trans trans = new Trans();
+            transaction firstTran = new transaction();
+            firstTran.ID = "1";
+            firstTran.Name = "firstran";
+            firstTran.Image = "fljsadkffdklsjslkfjdskl";
+            transaction secondTran = new transaction();
+            secondTran.ID = "2";
+            secondTran.Name = "secondTran";
+            secondTran.Image = "kfjkjkkkkkkkkkkkkkkkk";
+            trans.TranList.Add(firstTran); trans.TranList.Add(secondTran);
+            serializer.Serialize(sw, trans, ns);
+            sw.Close();
+        }
+
+
     }
 }
