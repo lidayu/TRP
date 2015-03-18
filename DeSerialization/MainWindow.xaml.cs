@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Xml.Serialization;
 using System.Xml;
-using System.IO;
+using System.Collections;
 
 
 namespace DeSerialization
@@ -27,10 +17,18 @@ namespace DeSerialization
         public MainWindow()
         {
             InitializeComponent();
+           
             XmlDocument doc = new XmlDocument();
             doc.Load("test.xml");
             string InXml = doc.OuterXml;
             this.DataContext = new MainViewModel(InXml);
+            Hashtable doyHt1 = new Hashtable();
+            doyHt1.Add("1", "lidayu");
+            doyHt1.Add("2", "zhangwei");
+            Hashtable ht2 = doyHt1;
+
+            ht2["1"] = "doylee"; ht2 = doyHt1;
+            string dd = ht2["1"].ToString();
 
 
             #region  动态绑定
@@ -68,12 +66,12 @@ namespace DeSerialization
                 XmlReader xmlReader = XmlReader.Create("conf\\transaction.xml");
 
 
-                XmlSerializer xmlSearializer = new XmlSerializer(typeof(Trans));
-                Trans info = (Trans)xmlSearializer.Deserialize(xmlReader);
+                XmlSerializer xmlSearializer = new XmlSerializer(typeof(Transactions));
+                Transactions info = (Transactions)xmlSearializer.Deserialize(xmlReader);
             }
             catch
             {
-
+               
             }
 
 
@@ -86,23 +84,23 @@ namespace DeSerialization
         /// </summary>
         private void Class2Xml()
         {
-            StringWriter sw = new StringWriter();
-            //创建XML命名空间
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("", "");
-            XmlSerializer serializer = new XmlSerializer(typeof(Trans));
-            Trans trans = new Trans();
-            transaction firstTran = new transaction();
-            firstTran.ID = "1";
-            firstTran.Name = "firstran";
-            firstTran.Image = "fljsadkffdklsjslkfjdskl";
-            transaction secondTran = new transaction();
-            secondTran.ID = "2";
-            secondTran.Name = "secondTran";
-            secondTran.Image = "kfjkjkkkkkkkkkkkkkkkk";
-            trans.TranList.Add(firstTran); trans.TranList.Add(secondTran);
-            serializer.Serialize(sw, trans, ns);
-            sw.Close();
+            //StringWriter sw = new StringWriter();
+            ////创建XML命名空间
+            //XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            //ns.Add("", "");
+            //XmlSerializer serializer = new XmlSerializer(typeof(Trans));
+            //Trans trans = new Trans();
+            //transaction firstTran = new transaction();
+            //firstTran.ID = "1";
+            //firstTran.Name = "firstran";
+            //firstTran.Image = "fljsadkffdklsjslkfjdskl";
+            //transaction secondTran = new transaction();
+            //secondTran.ID = "2";
+            //secondTran.Name = "secondTran";
+            //secondTran.Image = "kfjkjkkkkkkkkkkkkkkkk";
+            //trans.TranList.Add(firstTran); trans.TranList.Add(secondTran);
+            //serializer.Serialize(sw, trans, ns);
+            //sw.Close();
         }
 
 

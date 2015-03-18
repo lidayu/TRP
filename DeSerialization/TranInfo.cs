@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace DeSerialization
@@ -16,10 +14,11 @@ namespace DeSerialization
         public string Parameter { get; set; }
     }
 
-    public class Trans
+    public class Transactions
     {
         List<transaction> tranList = new List<transaction>();
 
+        
         [XmlElement(ElementName = "transaction")]      
         public List<transaction> TranList
         {
