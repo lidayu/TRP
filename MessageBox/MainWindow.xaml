@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="MessageBoxTEST.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+         Height="350" Width="525">
+    <Grid x:Name="doyGrid">
+        <Button Content="MessageBoxTest" Height="31" HorizontalAlignment="Left" Margin="389,251,0,0" Name="button1" VerticalAlignment="Top" Width="102" Click="button1_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="28,21,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" LostFocus="textBox1_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="28,59,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" GotFocus="textBox2_GotFocus" />
+        <RadioButton Content="口头挂失" Height="16" HorizontalAlignment="Left" Margin="28,96,0,0" Name="radioButton1" VerticalAlignment="Top" />
+        <RadioButton Content="RadioButton2" Height="16" HorizontalAlignment="Left" Margin="136,96,0,0" Name="radioButton2" VerticalAlignment="Top" />
+        <CheckBox Content="CheckBox" Height="16" HorizontalAlignment="Left" Margin="28,129,0,0" Name="checkBox1" VerticalAlignment="Top" />
+        <Button Content="GetViewData" Height="23" HorizontalAlignment="Left" Margin="271,255,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="291,62,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="1" IsSelected="True" />
+            <ComboBoxItem Content="2" />
+            <ComboBoxItem Content="3" />
+            <ComboBoxItem Content="4" />
+            <ComboBoxItem Content="5" />
+        </ComboBox>
+        <Button Content="GetComboBoxValue" Height="23" HorizontalAlignment="Left" Margin="406,222,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+        <Button Content="TestXML" Height="23" HorizontalAlignment="Left" Margin="180,259,0,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
+        <DatePicker Height="28" HorizontalAlignment="Left" Margin="169,145,0,0" Name="datePicker1" VerticalAlignment="Top" Width="161" SelectedDate="{x:Static sys:DateTime.Now}"  />
+        <Button Content="ChangeDate" Height="23" HorizontalAlignment="Left" Margin="169,222,0,0" Name="button5" VerticalAlignment="Top" Width="75" Click="button5_Click" />
+    </Grid>
+</UserControl>

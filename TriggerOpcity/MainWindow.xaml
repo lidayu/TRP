@@ -1,0 +1,31 @@
+﻿<Window x:Class="TriggerOpcity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="DatePicker">          
+            <Style.Triggers>                
+                <Trigger Property="IsEnabled" Value="false">                    
+                    <Setter Property="Opacity" Value="1"/> 
+                    <Setter Property="Foreground" Value="black" />
+                </Trigger>                
+            </Style.Triggers>            
+        </Style>
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Opacity" Value="1" />
+                    <Setter Property="Background" Value="Red" />
+                </Trigger>
+            </Style.Triggers>            
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="133,106,0,0" Name="button1" VerticalAlignment="Top" Width="75" />
+        <GroupBox Header="groupBox1" Height="100" HorizontalAlignment="Left" Margin="268,35,0,0" Name="groupBox1" VerticalAlignment="Top" Width="200">
+            <Grid />
+        </GroupBox>
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="230,206,0,0" Name="datePicker1" VerticalAlignment="Top" Width="115" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="230,248,0,0" Name="datePicker2" VerticalAlignment="Top" Width="115" />
+    </Grid>
+</Window>

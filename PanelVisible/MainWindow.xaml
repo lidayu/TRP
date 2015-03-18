@@ -1,0 +1,21 @@
+﻿<Window x:Class="PanelVisible.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:PanelVisible"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Resources>
+            <vm:Class1 x:Key="DoyConverter" />
+        </Grid.Resources>
+        <GroupBox Visibility="{Binding ElementName=radioButton1, Converter={StaticResource DoyConverter}}"  Header="groupBox1" Height="136" HorizontalAlignment="Left" Margin="26,55,0,0" Name="groupBox1" VerticalAlignment="Top" Width="451">
+            <Grid>
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="44,38,0,0" Name="textBox1" VerticalAlignment="Top" Width="143" />
+            </Grid>
+        </GroupBox>
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="378,250,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <RadioButton Content="显" Height="16" HorizontalAlignment="Left" Margin="64,18,0,0" Name="radioButton1" VerticalAlignment="Top" GroupName="aa" Checked="radioButton1_Checked" />
+        <RadioButton Content="隐" Height="16" HorizontalAlignment="Left" Margin="224,20,0,0" Name="radioButton2" VerticalAlignment="Top" GroupName="aa" Checked="radioButton2_Checked" />
+        <RadioButton Content="RadioButton" Height="16" HorizontalAlignment="Left" Margin="303,18,0,0" Name="radioButton3" VerticalAlignment="Top" GroupName="bb" />
+        <RadioButton Content="RadioButton" Height="16" HorizontalAlignment="Left" Margin="303,40,0,0" Name="radioButton4" VerticalAlignment="Top" GroupName="bb" />
+    </Grid>
+</Window>
