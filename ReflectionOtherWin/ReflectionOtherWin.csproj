@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{581F48D5-1E30-4B1A-BA35-24663D2CF371}</ProjectGuid>
+    <ProjectGuid>{4ED44189-D208-44FE-88E1-2B6E1F5BA5FE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TreeViewTester</RootNamespace>
-    <AssemblyName>TreeViewTester</AssemblyName>
+    <RootNamespace>ReflectionOtherWin</RootNamespace>
+    <AssemblyName>ReflectionOtherWin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -63,15 +63,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EqukCommonDataProvider.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NodeItem.cs" />
-    <Compile Include="people.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -96,7 +93,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="EqukCommonData.xml" />
+    <ProjectReference Include="..\MessageBox\MessageBox.csproj">
+      <Project>{823EB74F-4993-445B-AB4C-519C6B3DC9AE}</Project>
+      <Name>MessageBox</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
