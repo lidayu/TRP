@@ -56,11 +56,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProviderBase\DataSelectWindowBase.cs" />
     <Compile Include="DataSelectWindow.xaml.cs">
       <DependentUpon>DataSelectWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DicDataSelectedEventArg.cs" />
-    <Compile Include="EqukTextBox.cs" />
+    <Compile Include="DataProviderBase\DicDataSelectedEventArg.cs" />
+    <Compile Include="DataProviderBase\EqukTextBox.cs" />
     <Compile Include="popMessage.xaml.cs">
       <DependentUpon>popMessage.xaml</DependentUpon>
     </Compile>

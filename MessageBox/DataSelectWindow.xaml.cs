@@ -10,22 +10,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MessageBoxTEST.DataProviderBase;
 
 namespace MessageBoxTEST
 {
     /// <summary>
     /// Interaction logic for DataSelectWindow.xaml
     /// </summary>
-    public partial class DataSelectWindow : Window
+    public partial class DataSelectWindow : DataSelectWindowBase
     {
         public DataSelectWindow()
         {
             InitializeComponent();
-        }
-        
-        public delegate void DataSelectedEventHandler(object sender, DicDataSelectedEventArg e);
-        
-        public event DataSelectedEventHandler AfterSelect;
+        }       
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
@@ -34,7 +31,8 @@ namespace MessageBoxTEST
 
             string selectCode = "0000";
             DicDataSelectedEventArg paras = new DicDataSelectedEventArg { SelectedText = selectedText, SelectedCode = selectCode };
-            this.AfterSelect(this, paras);
+            OnAfterSelect(paras);
+           
             this.Close();
         }
 

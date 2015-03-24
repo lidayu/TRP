@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Closed="Window_Closed" xmlns:my="clr-namespace:MessageBoxTEST" >
     <Grid>
-        <my:EqukTextBox Height="27" HorizontalAlignment="Left" Margin="48,44,0,0" x:Name="equkTextBox1" VerticalAlignment="Top" Width="178" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="64,98,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" PreviewMouseDown="textBox1_PreviewMouseDown" />
+        <!--<my:EqukTextBox Height="27" HorizontalAlignment="Left" Margin="48,44,0,0" x:Name="equkTextBox1" VerticalAlignment="Top" Width="178" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="64,98,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" PreviewMouseDown="textBox1_PreviewMouseDown" />-->
     </Grid>
 </Window>

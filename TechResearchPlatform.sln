@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMWithouPrism", "MVVMWith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionOtherWin", "ReflectionOtherWin\ReflectionOtherWin.csproj", "{4ED44189-D208-44FE-88E1-2B6E1F5BA5FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridBinding", "DataGridBinding\DataGridBinding.csproj", "{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DpChanged", "DpChanged\DpChanged.csproj", "{7BA52E20-FC12-4690-8A50-4969C815590C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -191,6 +195,26 @@ Global
 		{4ED44189-D208-44FE-88E1-2B6E1F5BA5FE}.Release|Mixed Platforms.Build.0 = Release|x86
 		{4ED44189-D208-44FE-88E1-2B6E1F5BA5FE}.Release|x86.ActiveCfg = Release|x86
 		{4ED44189-D208-44FE-88E1-2B6E1F5BA5FE}.Release|x86.Build.0 = Release|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Debug|x86.ActiveCfg = Debug|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Debug|x86.Build.0 = Debug|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Release|Any CPU.ActiveCfg = Release|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Release|Mixed Platforms.Build.0 = Release|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Release|x86.ActiveCfg = Release|x86
+		{01C0BF89-9F06-471A-A4BC-A4C7D0158AC1}.Release|x86.Build.0 = Release|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Debug|x86.ActiveCfg = Debug|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Debug|x86.Build.0 = Debug|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|Any CPU.ActiveCfg = Release|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|Mixed Platforms.Build.0 = Release|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|x86.ActiveCfg = Release|x86
+		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

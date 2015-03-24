@@ -36,7 +36,7 @@ namespace MessageBoxTEST
 
         private void textBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.textBox1.Text = "ahahahahahahah";
+            //this.textBox1.Text = "ahahahahahahah";
         }
 
         //private void textBox1_GotFocus(object sender, RoutedEventArgs e)

@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Reflection;
 using MessageBoxTEST;
+using MessageBoxTEST.DataProviderBase;
 
 namespace ReflectionOtherWin
 {
@@ -21,6 +22,7 @@ namespace ReflectionOtherWin
     /// </summary>
     public partial class MainWindow : Window
     {
+        private object fieldNeededData = null;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,10 +30,11 @@ namespace ReflectionOtherWin
 
         private void textBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            fieldNeededData = sender;
             Assembly dataWin = Assembly.LoadFrom("MessageBox.dll");
             Type dataWinType = dataWin.GetType("MessageBoxTEST.DataSelectWindow");
-            DataSelectWindow dataWindow = Activator.CreateInstance(dataWinType) as DataSelectWindow;
-            dataWindow.AfterSelect += setMainWindowValue;
+            DataSelectWindowBase dataWindow = Activator.CreateInstance(dataWinType) as DataSelectWindowBase;
+            dataWindow.AfterSelectEvent += setMainWindowValue;
             dataWindow.ShowDialog();
             
             
@@ -40,7 +43,21 @@ namespace ReflectionOtherWin
         
         private void setMainWindowValue(object sender,DicDataSelectedEventArg e)
         {
-            this.textBox1.Text = e.SelectedText;
+
+            TextBox focusedTextBox = fieldNeededData as TextBox;
+           focusedTextBox.Text = e.SelectedText;
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            DataUsercontrolWin dddd = new DataUsercontrolWin();
+            dddd.BringIntoView();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            DataSelectWindow win = new DataSelectWindow();
+            win.ShowDialog();
         }
     }
 }
