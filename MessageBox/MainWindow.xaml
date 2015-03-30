@@ -22,5 +22,6 @@
         <Button Content="TestXML" Height="23" HorizontalAlignment="Left" Margin="180,259,0,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
         <DatePicker Height="28" HorizontalAlignment="Left" Margin="169,145,0,0" Name="datePicker1" VerticalAlignment="Top" Width="161" SelectedDate="{x:Static sys:DateTime.Now}"  />
         <Button Content="ChangeDate" Height="23" HorizontalAlignment="Left" Margin="169,222,0,0" Name="button5" VerticalAlignment="Top" Width="75" Click="button5_Click" />
+        <Label Content="中南海" Height="28" HorizontalAlignment="Left" Margin="223,21,0,0" Name="label1" VerticalAlignment="Top" Visibility="Collapsed" />
     </Grid>
 </UserControl>

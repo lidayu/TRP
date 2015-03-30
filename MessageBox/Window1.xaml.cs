@@ -21,6 +21,8 @@ namespace MessageBoxTEST
         public Window1()
         {
             InitializeComponent();
+            MainWindow dWin = new MainWindow();
+            this.containerDD.Child = dWin;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -28,5 +30,7 @@ namespace MessageBoxTEST
             
             e.Cancel = true;
         }
+
+  
     }
 }

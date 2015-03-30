@@ -102,6 +102,11 @@ namespace MessageBoxTEST
                             equkData.Add(childCB.Content, "true");
                         childCB.IsEnabled = false;
                     }
+                    else if (childVisual is Label)
+                    {
+                        Label childLb = childVisual as Label;
+                        string childLbTxt = childLb.Content.ToString();
+                    }
                     else if (childVisual is ComboBox)
                     {
                         ComboBox childComboBox = childVisual as ComboBox;
@@ -111,10 +116,6 @@ namespace MessageBoxTEST
                         GetViewData(childVisual); 
                 }
             }
-
-
-
-           
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
@@ -150,6 +151,23 @@ namespace MessageBoxTEST
             //if(this.datePicker1.Text.Contains("-"))
             //    MessageBox.Show("contain -");
             //this.datePicker1.Text = "2014-12-13";
+        }        
+    }
+
+    //<summary>
+    //Entry point class to handle single instance of the application
+    //</summary>
+    public static class EntryPoint
+    {
+        [STAThread]
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Main");
+            Console.ReadLine();
+            Window1 showWin = new Window1();
+            showWin.Show();
+            //App app = new App();
+            //app.Run();
         }
     }
 }

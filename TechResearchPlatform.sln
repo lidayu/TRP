@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridBinding", "DataGrid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DpChanged", "DpChanged\DpChanged.csproj", "{7BA52E20-FC12-4690-8A50-4969C815590C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonLength", "JsonLength\JsonLength.csproj", "{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +217,16 @@ Global
 		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|Mixed Platforms.Build.0 = Release|x86
 		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|x86.ActiveCfg = Release|x86
 		{7BA52E20-FC12-4690-8A50-4969C815590C}.Release|x86.Build.0 = Release|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Debug|x86.ActiveCfg = Debug|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Debug|x86.Build.0 = Debug|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Release|Any CPU.ActiveCfg = Release|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Release|Mixed Platforms.Build.0 = Release|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Release|x86.ActiveCfg = Release|x86
+		{72A88D0E-FF1D-4D27-96A4-288C84F6AE80}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
